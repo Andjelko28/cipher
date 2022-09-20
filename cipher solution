@@ -1,0 +1,16 @@
+function rot13(str) {
+    let result ='';
+   
+    for(let i = 0;i < str.length; i++){
+        let nums = str[i].charCodeAt()
+      if(nums >= 65 && nums <= 77){
+        result += String.fromCharCode( nums + 13);
+      }else if(nums >= 78 && nums <= 90 ){
+      result += String.fromCharCode( nums - 13)
+      }
+      else{
+        result += str[i];
+      }
+    }
+    return result;
+  }
